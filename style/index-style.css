@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sixtyfour+Convergence:SCAN,XELA,YELA@-22,71,30&family=Sixtyfour:SCAN@-3&display=swap');
+
+.sixtyfour-convergence-lettermain {
+    font-family: "Sixtyfour Convergence", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "BLED" 0,
+      "SCAN" -22,
+      "XELA" 71,
+      "YELA" 30;
+}
+
+body {
+    background-image: url(../images/FondoNegro.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+.box {
+    background-color: rgba(0, 0, 0, 0.562);
+
+    color: #990707;
+    font-family: "Sixtyfour Convergence", sans-serif;
+
+
+    width: 45%;
+    max-width: 800px; 
+    
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.493);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+h1:hover {
+
+    scale: 1.05;
+    transition: transform 0.3s ease;
+
+}
+
+@keyframes glitch {
+    0% { opacity: 1; transform: translate(0, 0); }
+    20% { opacity: 0.8; transform: translate(-2px, 2px); }
+    40% { opacity: 1; transform: translate(2px, -2px); }
+    60% { opacity: 0.9; transform: translate(-2px, -2px); }
+    80% { opacity: 1; transform: translate(2px, 2px); }
+    100% { opacity: 1; transform: translate(0, 0); }
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+}
+
+h2 , h1, .toptitle{
+    animation: glitch 0.2s infinite alternate, flicker 0.3s infinite;
+}
+
+
+
+
